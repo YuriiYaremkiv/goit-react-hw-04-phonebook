@@ -1,11 +1,9 @@
 import { useState } from 'react';
-import css from './app.module.scss';
-
 import useLocalStorage from '../components/hooks/useLocalStorage';
-
 import { ContactForm } from '../components/ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from '../components/ContactList/ContactList';
+import css from './app.module.scss';
 
 const shortid = require('shortid');
 

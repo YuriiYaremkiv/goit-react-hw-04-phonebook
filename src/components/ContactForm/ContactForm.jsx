@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import css from './ContactForm.module.scss';
 
 export const ContactForm = ({ onSubmitTo }) => {
@@ -20,7 +21,7 @@ export const ContactForm = ({ onSubmitTo }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    onSubmitTo({name, number});
+    onSubmitTo({ name, number });
     reset();
   };
 
@@ -62,4 +63,8 @@ export const ContactForm = ({ onSubmitTo }) => {
       </button>
     </form>
   );
+};
+
+ContactForm.propTypes = {
+  onSubmitTo: PropTypes.func.isRequired,
 };
